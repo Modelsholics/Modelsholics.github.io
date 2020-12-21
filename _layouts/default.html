@@ -3,22 +3,19 @@ layout: compress
 ---
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-  {% include head.html %}
+{% include head.html %}
 
-</head>
-<body id="{% if page.title %}{{ page.title | slugify }}{% else %}home{% endif %}" class="{{ page.layout | downcase }}-layout">
-  
+<body>
+
   {% include header.html %}
 
-  <main class="💈">
+  {{ content }}
 
-    {{ content }}
-    
-  </main>
+  {% include contact-section.html %}
 
   {% include footer.html %}
 
 </body>
+
 </html>
